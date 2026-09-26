@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 Rắn Săn Mồi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🐍 RẮN SĂN MỒI</h1>
+
+        <div class="score-board">
+            <div>
+                <span>Điểm</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div>
+                <span>Kỷ lục</span>
+                <strong id="highScore">0</strong>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+        <div class="status" id="status">
+            Nhấn Bắt đầu để chơi
+        </div>
+
+        <div class="buttons">
+            <button id="startBtn">▶ Bắt đầu</button>
+            <button id="pauseBtn">⏸ Tạm dừng</button>
+            <button id="restartBtn">🔄 Chơi lại</button>
+        </div>
+
+        <div class="settings">
+
+            <h2>⚙️ Tùy chỉnh</h2>
+
+            <div class="setting">
+                <label for="speed">
+                    ⚡ Tốc độ rắn:
+                    <span id="speedValue">Trung bình</span>
+                </label>
+
+                <input
+                    type="range"
+                    id="speed"
+                    min="1"
+                    max="5"
+                    value="3"
+                >
+            </div>
+
+            <div class="setting">
+                <label for="obstacles">
+                    🧱 Chướng ngại vật:
+                </label>
+
+                <select id="obstacles">
+                    <option value="0">Tắt</option>
+                    <option value="5">Ít</option>
+                    <option value="10">Trung bình</option>
+                    <option value="20">Nhiều</option>
+                </select>
+            </div>
+
+            <div class="setting checkbox-setting">
+                <label>
+                    🎵 Nhạc nền
+                    <input type="checkbox" id="musicToggle" checked>
+                </label>
+            </div>
+
+            <div class="setting checkbox-setting">
+                <label>
+                    🔊 Âm thanh ăn mồi
+                    <input type="checkbox" id="soundToggle" checked>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="controls">
+
+            <h2>🎮 Điều khiển</h2>
+
+            <div class="keyboard">
+                <button data-key="ArrowUp">▲</button>
+
+                <div>
+                    <button data-key="ArrowLeft">◀</button>
+                    <button data-key="ArrowDown">▼</button>
+                    <button data-key="ArrowRight">▶</button>
+                </div>
+            </div>
+
+            <p>Máy tính: dùng phím mũi tên hoặc WASD</p>
+            <p>Điện thoại: dùng các nút điều khiển phía trên</p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
